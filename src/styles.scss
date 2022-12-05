@@ -1,0 +1,15 @@
+/* Global styles */
+@import "../node_modules/tailwindcss/base.css";
+@import "../node_modules/tailwindcss/components";
+@import "../node_modules/tailwindcss/utilities";
+
+// Custom
+@import "../src/assets/styles/main";
+@import "../src/assets/styles/components/buttons";
+@import "../src/assets/styles/components/spinner";
+@import "../src/assets/styles/components/search";
+@import "../src/assets/styles/containers/main";
+@import "../src/assets/styles/containers/grid";
+
+@import "../src/assets/styles/utils/colors";
+@import "../src/assets/styles/utils/fonts";

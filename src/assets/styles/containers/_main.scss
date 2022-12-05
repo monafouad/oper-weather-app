@@ -1,0 +1,56 @@
+
+.weather-app-container{
+    @apply container mx-auto max-w-5xl
+}
+
+.main-cont{
+    height: text-gray-700;
+
+    &__header{
+        @apply grid grid-cols-2 gap-4 content-center mt-8;
+
+    }
+    &__subtitle{
+        @apply fs-md mb-3 inline-block;
+    }
+
+    &__img{
+        width: 200px;
+        filter: invert(47%) sepia(96%) saturate(414%) hue-rotate(144deg) brightness(93%) contrast(83%);
+    }
+    &__col--right{
+        @apply justify-items-end text-right;
+    }
+    &__txt{
+        @apply fs-md;
+        &--blu{
+            @apply text-blue-100;
+        }
+        &--sm{
+            @apply mb-2;
+                font-size:26px;
+                display: block;
+        }
+    }
+
+    &__title{
+        font-size: $header-title;
+        @apply  mb-8 inline-block;
+    }
+    &__title-sm{
+        @apply leading-tight inline-block fs-md;
+    }
+
+    &__img{
+        @apply mr-4 inline-block;
+        width: 200px;
+   }
+   &__temp{
+       @apply fs-xl fw-100 block;
+       line-height: $temp-title-lineheight;
+   }
+   &__temp-col{
+        @apply  fw-200 block;
+        font-size: $temp-col-font-size;
+    }
+}

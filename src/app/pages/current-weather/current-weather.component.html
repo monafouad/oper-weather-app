@@ -1,0 +1,49 @@
+<ng-container *ngIf="!loadingData">
+  <div *ngIf="resultFound()">
+    <app-search></app-search>
+    <div class="main-cont mt-40">
+      <div class="main-cont__header">
+        <div class="main-cont__col--left">
+          <div class="block">
+            <h1 class="main-cont__title">{{ currentWeather.name }}</h1>
+            <span class="main-cont__subtitle">{{ currentWeather.dt_txt | dateFormatPipe }},
+              {{ currentWeather.sys?.country }}</span>
+          </div>
+          <div>
+            <img [src]="currentWeather.weather[0].main | weatherImagesPipe" class="main-cont__img" alt="Weather" />
+          </div>
+          <div class="main-cont__subtitle">{{
+            currentWeather.weather[0].main
+            }}</div>
+        </div>
+        <div class="main-cont__col--right">
+          <span class="main-cont__temp">
+            {{ currentWeather.main.temp | number: "1.0-0" }}<sup>o</sup>
+          </span>
+          <div class="main-cont__temp-col">
+            <span class="main-cont__txt--blu">
+              {{ currentWeather.main.temp_min | number: "1.0-0" }}°
+            </span>
+            /
+            <span> {{ currentWeather.main.temp_max | number: "1.0-0" }}°</span>
+            <span class="main-cont__txt--sm">
+              {{
+              weatherForcastAttributeLabel[weatherForcastAttribute.FEELS_LIKE]
+              }}
+              {{ currentWeather.main.feels_like | number: "1.0-0" }}°
+            </span>
+          </div>
+          <button class="btn btn--primary" (click)="openWetherForcast()">
+            {{buttonTxt}}
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</ng-container>
+
+<ng-container *ngIf="loadingData">
+  <app-spinner></app-spinner>
+</ng-container>
+
+<router-outlet></router-outlet>

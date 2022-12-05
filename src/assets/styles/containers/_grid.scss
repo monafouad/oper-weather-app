@@ -1,0 +1,31 @@
+.grid-cont{
+    &__cards{
+        @apply grid grid-cols-4 gap-4 content-center;
+    }
+    &__item{
+        @apply bg-white p-3 rounded-lg shadow-lg;
+        display: inline-block;
+        &-title{
+            @apply mb-4 fs-md;
+        }
+    }
+    &__title{
+        font-size: $header-title;
+        @apply  mb-8 block;
+    }
+    &__title-sm{
+        @apply fw-900 mt-2 fs-md;
+    }
+    &__txt{
+        @apply block mb-2;
+    }
+    &__txt-blue{
+        @apply  fs-md-2 text-blue-100 inline-block;
+        float: right;
+    }
+    &__img{
+        @apply inline-block;
+        width: 70px;
+        filter: invert(47%) sepia(96%) saturate(414%) hue-rotate(144deg) brightness(93%) contrast(83%);
+   }
+}

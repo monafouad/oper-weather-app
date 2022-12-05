@@ -1,0 +1,14 @@
+
+html, body { height: 100%; }
+
+body{
+    font-family: 'Nunito', sans-serif;
+    background: #fff;;
+    @apply text-gray-600;
+}
+
+$current-weather-container-height: auto;
+$temp-title-lineheight: 110px;
+$title-line-height: 68px;
+$temp-col-font-size:2.9em;
+$header-title: 4em;

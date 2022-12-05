@@ -1,0 +1,7 @@
+.citySearchForm{
+    @apply flex items-center border-b-blue-100 py-2;
+    input{
+        width: 100%;
+        @apply  appearance-none border-none focus:ring-0 bg-transparent w-full text-gray-700 mr-3 py-1 px-2;
+    }
+}

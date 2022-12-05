@@ -1,0 +1,37 @@
+<ng-container *ngIf="!loadingData">
+    <div class="grid-cont">
+        <h1 class="grid-cont__title">{{city | titlecase }} next four days</h1>
+        <div class="grid-cont__cards">
+            <div *ngFor="let weatherAttribute of forecast.list" class="grid-cont__item">
+                <h2 class="grid-cont__item-title">
+                    {{ weatherAttribute.dt_txt | dateFormatPipe }}
+                </h2>
+                <div>
+                    <img [src]="weatherAttribute.weather[0].main | weatherImagesPipe" alt="Weather" class="grid-cont__img" />
+                    <div class="grid-cont__txt-blue inline-block">
+                        {{ weatherAttribute.main.temp | number : '1.0-0' }}°
+                    </div>
+                </div>
+                <div class="grid-cont__title-sm">
+                    {{ weatherAttribute.weather[0].main }}
+                </div>
+                <div>
+                    {{ weatherForcastAttributeLabel[weatherForcastAttribute.TEMP_MIN] }}
+                    {{ weatherAttribute.main.temp_min | number : '1.0-0' }}°
+                </div>
+                <div>
+                    {{ weatherForcastAttributeLabel[weatherForcastAttribute.TEMP_MAX] }}
+                    {{ weatherAttribute.main.temp_max | number : '1.0-0' }}°
+                </div>
+                <div>
+                    {{ weatherForcastAttributeLabel[weatherForcastAttribute.HUMIDITY] }}
+                    {{ weatherAttribute.main.humidity }}
+                </div>
+            </div>
+        </div>
+    </div>
+</ng-container>
+
+<ng-container *ngIf="loadingData">
+    <app-spinner></app-spinner>
+</ng-container>
