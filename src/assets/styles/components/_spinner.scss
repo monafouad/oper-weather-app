@@ -1,4 +1,9 @@
 
+
+$spinner: #219ebc;
+$background: #fff;
+$size: 50px;
+
 .spinner {
   position: absolute;
   top: calc(50% - #{$size / 2});

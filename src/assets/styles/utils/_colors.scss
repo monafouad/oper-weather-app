@@ -10,8 +10,8 @@ $colors: (
   'gray-700' #4a5568,
   'gray-800' #2d3748,
   'gray-900' #1a202c,
-
   'blue-100' #219ebc,
+  'white': #fff
 );
 
 @each $name, $hex in $colors {
