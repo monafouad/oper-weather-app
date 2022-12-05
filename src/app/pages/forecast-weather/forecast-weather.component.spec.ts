@@ -41,11 +41,8 @@ describe('ForecastWeatherComponent', () => {
           }]
         )
       )
-
     }
-
   })
-
 
   it('should create', () => {
     expect(component).toBeTruthy();
