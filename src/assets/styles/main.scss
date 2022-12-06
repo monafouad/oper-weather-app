@@ -3,7 +3,7 @@ html, body { height: 100%; }
 
 body{
     font-family: 'Nunito', sans-serif;
-    @apply text-gray-600 $bg-white;
+    color: #4a5568;
 }
 
 $current-weather-container-height: auto;
@@ -11,7 +11,3 @@ $temp-title-lineheight: 110px;
 $title-line-height: 68px;
 $temp-col-font-size:2.9em;
 $header-title: 4em;
-
-$spinner: #219ebc;
-$background: #fff;
-$size: 50px;
