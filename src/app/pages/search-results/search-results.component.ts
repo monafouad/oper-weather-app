@@ -30,7 +30,6 @@ export class SearchResultsComponent implements OnInit {
     this.weatherService.getForecast(city).subscribe(
       (res) => {
         this.forecast = res;
-        console.log('forecast ', this.forecast.list);
       },
       (_err) => { console.log(_err)}
     );

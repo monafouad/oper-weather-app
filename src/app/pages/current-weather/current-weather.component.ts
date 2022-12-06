@@ -35,7 +35,6 @@ export class CurrentWeatherComponent implements OnInit {
     this.loc$ = store.pipe(select('loc'));
     this.loc$.subscribe((loc) => {
       this.loc = loc;
-      console.log('LOC ', loc);
       this.searchWeather(loc);
     });
   }

@@ -37,7 +37,6 @@ export class HeaderComponent implements OnInit {
     this.weatherService.getWeatherDataBycoords(this.lat, this.lon).subscribe(
       (res) => {
         this.currentWeather = res;
-        console.log('CONE ', this.currentWeather);
       },
       (err) => {
         if (err.error && err.error.message) {
